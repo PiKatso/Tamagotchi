@@ -4,14 +4,14 @@
 <h3>Rest Status: <%= @show_snooze %></h3>
 <h3>Activity Status: <%= @show_activity %></h3>
 
-<form class="" action="/feed_it" >
-  <a href  id="feed-it" action="/feed_it" class="btn btn-success" >Feed it!</a>
+<form class="form1" action="/feed_it" method="post">
+  <button id="feed-it" class="btn btn-success" >Feed it!</button>
 </form>
 <br>
-<form class="" action="/nap_time">
-<a href id="nap-it" action="/nap_time" class="btn btn-primary">Nap Time</a>
+<form class="form2" action="/nap_time" method="post">
+<button href id="nap-it" class="btn btn-primary">Nap Time</button>
 </form>
 <br>
-<form class="" action="/work_out">
-<a href id="work-it" action="/work_out" class="btn btn-danger">Work Out!</a>
+<form class="form3" action="/work_out" method="post">
+<button href id="work-it"  class="btn btn-danger">Work Out!</button>
 </form>
