@@ -19,8 +19,22 @@ class Tamagotchi
     @food = stat
   end
 
+  define_method(:feed_it) do
+    @food += 3
+    if @food >= 10
+      @food = 10
+    end
+  end
+
   define_method(:snooze_stats) do
     @snooze
+  end
+
+  define_method(:nap_time) do
+    @snooze +=3
+    if @snooze >= 10
+      @snooze = 10
+    end
   end
 
   define_method(:activity_stats) do
@@ -36,8 +50,6 @@ class Tamagotchi
   end
 
   define_method(:time_passes) do
-    @food -= 1
-    @snooze -= 1
-    @activity -= 1
+    @food -= 1 & @snooze -= 1 & @activity -= 1
   end
 end

@@ -34,4 +34,21 @@ describe 'Tamagotchi' do
       expect(my_pet.activity_stats()).to(eq(9))
     end
   end
+
+    describe("#feed_it") do
+      it("increases the amount of food the Tamagotchi has by 3") do
+        my_pet = Tamagotchi.new("chipmunk")
+        my_pet.set_food_level(6)
+        my_pet.feed_it()
+        expect(my_pet.food_stats()).to(eq(9))
+      end
+    end
+
+    describe("#nap_time") do
+      it("increases the amount of snooze stats the Tamagotchi has by 3") do
+        my_pet = Tamagotchi.new("chipmunk")
+        my_pet.feed_it()
+        expect(my_pet.food_stats()).to(eq(10))
+      end
+    end
 end
