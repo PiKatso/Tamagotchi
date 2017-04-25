@@ -1,11 +1,13 @@
 class Tamagotchi
 
   define_method(:initialize) do |name|
-    @name = name
+    @name = ""
     @food = 10
     @snooze = 10
     @activity = 10
   end
+
+
 
   define_method(:name) do
     @name
@@ -32,7 +34,6 @@ class Tamagotchi
 
   define_method(:nap_time) do
     @snooze +=3
-    @food -= 1
     if @snooze >= 10
       @snooze = 10
     end
@@ -44,7 +45,6 @@ class Tamagotchi
 
   define_method(:work_out) do
     @activity += 3
-    @food -= 2
     if @activity >= 10
       @activity = 10
     end

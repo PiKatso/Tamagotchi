@@ -1,5 +1,10 @@
-<%= # sample output html
-# <h2><%= @message %></h2>
-# <hr>
-# <a href="/" class="btn btn-danger">reset</a>
-%>
+<h3>Food Status: <%= @show_food %></h3>
+<h3>Rest Status: <%= @show_snooze %></h3>
+<h3>Activity Status: <%= @show_activity %></h3>
+
+
+  <a href  id="feed-it" action="/feed_it" class="btn btn-success" >Feed it!</a>
+
+  <a href id="nap-it" action="/nap_time" class="btn btn-primary">Nap Time</a>
+
+  <a href id="work-it" action="/work_out" class="btn btn-danger">Work Out!</a>
