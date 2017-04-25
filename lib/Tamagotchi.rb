@@ -36,7 +36,8 @@ class Tamagotchi
   end
 
   define_method(:time_passes) do
-    @food = @food - 1
-
+    @food -= 1
+    @snooze -= 1
+    @activity -= 1
   end
 end
