@@ -13,4 +13,15 @@ describe 'Tamagotchi' do
     end
   end
 
+  describe("#alive") do
+    it("is alive if food stats are above 0") do
+      my_pet = Tamagotchi.new("chipmunk",10,10,10)
+      expect(my_pet.alive()).to(eq(true))
+    end
+    it("is dead if food stats are 0") do
+      my_pet = Tamagotchi.new("chipmunk",0,10,10)
+      expect(my_pet.alive()).to(eq(false))
+    end
+  end
+
 end
